@@ -4,7 +4,7 @@
   left: 0;
   width: 100%;
   height: 50px;
-  background-color: #A887BA;
+  background-color: #6A4E79;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -30,7 +30,7 @@
   color: #6A4E79;
   padding: 4px 14px;
   border-radius: 6px;
-  font-family: 'Fredoka', sans-serif;
+  font-family: 'Pixelify Sans', sans-serif;
   font-size: 16px;
   cursor: pointer;
 }
@@ -40,7 +40,7 @@
   align-items: center;
   gap: 12px;
   color: white;
-  font-family: 'Fredoka', sans-serif;
+  font-family: 'Pixelify Sans', sans-serif;
   font-size: 18px;
 }
 
@@ -51,6 +51,6 @@
 }
 
 .taskbar-right span {
-  font-family: 'Karla', sans-serif;
+  font-family: 'Pixelify Sans', sans-serif;
   font-weight: 500;
 }
