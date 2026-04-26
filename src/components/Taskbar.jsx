@@ -20,7 +20,7 @@ function Taskbar({ openApps, onAppClick }) {
     <div className="taskbar">
       <div className="taskbar-left">
         <div className="start-btn">
-            <img src="/src/assets/icons/Start.png" alt="start" />
+            <img src="/src/assets/icons/Star.png" alt="start" />
         </div>
         {openApps.map(app => (
           <div key={app.id} className="taskbar-app" onClick={() => onAppClick(app.id)}>
@@ -30,7 +30,7 @@ function Taskbar({ openApps, onAppClick }) {
       </div>
       <div className="taskbar-right">
         <img src="/src/assets/icons/Wifi.png" alt="wifi" />
-        <img src="/src/assets/icons/Volume.png" alt="volume" />
+        <img src="/src/assets/icons/Sound.png" alt="volume" />
         <span>{date}, {time}</span>
       </div>
     </div>

@@ -3,7 +3,7 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 50px;
+  height: 45px;
   background-color: #6A4E79;
   display: flex;
   align-items: center;
@@ -20,8 +20,8 @@
 }
 
 .start-btn img{
-  width: 35px;
-  height: 35px;
+  width: 45px;
+  height: 45px;
   object-fit: contain;
 }
 
@@ -51,6 +51,6 @@
 }
 
 .taskbar-right span {
-  font-family: 'Pixelify Sans', sans-serif;
-  font-weight: 500;
+  font-family: 'Pixelify Sans', monospace;
+  font-size: 18px;
 }
