@@ -3,6 +3,7 @@ import Desktop from './components/Desktop'
 import Taskbar from './components/Taskbar'
 import Menubar from './components/Menubar'
 import Window from './components/Window'
+import SystemMessage from './components/SystemMessage'
 
 function App() {
   const [openApps, setOpenApps] = useState([])
@@ -57,6 +58,7 @@ function App() {
         />
       ))}
       <Taskbar openApps={openApps} onAppClick={toggleMinimise} />
+      <SystemMessage />
     </>
   )
 }

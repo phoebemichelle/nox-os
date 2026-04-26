@@ -43,7 +43,7 @@
   align-items: center;
   gap: 12px;
   color: white;
-  font-family: 'Pixelify Sans', sans-serif;
+  font-family: 'Karla', sans-serif;
   font-size: 18px;
 }
 
@@ -54,6 +54,6 @@
 }
 
 .taskbar-right span {
-  font-family: 'Pixelify Sans', monospace;
+  font-family: 'Karla', monospace;
   font-size: 18px;
 }

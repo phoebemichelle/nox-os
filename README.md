@@ -12,7 +12,7 @@
 
 I didn't want to build just another portfolio website. Instead, I built **Nox OS** — an interactive desktop simulation where every "app" is a window containing information about me. Every icon you see was hand-drawn pixel by pixel in Aseprite, with inspiration from Pinterest. This project has been such a good creative outlet.
 
-**Live site:** [phoebemichelle.vercel.app](https://phoebemichelle.vercel.app)
+**Live site:** [phoebesunata.vercel.app](https://phoebesunata.vercel.app)
 
 ---
 
@@ -63,6 +63,7 @@ src/
     EducationApp.jsx  # Education window
     ProjectsApp.jsx   # Projects window
     ContactApp.jsx    # Contact form window
+    SystemMessage.jsx # Welcome message window
     SpotifyApp.jsx    # Spotify window (WIP)
   assets/
     icons/            # Hand-drawn pixel art icons
@@ -75,7 +76,7 @@ src/
 
 ```bash
 # Clone the repo
-git clone https://github.com/phoebemichelle/portfolio.git
+git clone https://github.com/phoebemichelle/nox-os
 
 # Install dependencies
 cd portfolio
@@ -101,4 +102,4 @@ Master of IT Student @ University of Auckland
 
 ---
 
-<p align="center">built with love (and a lot of late nights) ૮ ˶ᵔ ᵕ ᵔ˶ ა</p>
+<p align="center">built with love (and a lot of hard work) ૮ ˶ᵔ ᵕ ᵔ˶ ა</p>

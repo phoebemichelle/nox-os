@@ -1,0 +1,55 @@
+.system-message {
+  position: fixed;
+  bottom: 70px;
+  right: 20px;
+  width: 280px;
+  background-color: #f0e8f8;
+  border: 3px solid #7c4fa0;
+  border-radius: 10px;
+  box-shadow: 4px 4px 0px #7c4fa0;
+  z-index: 9999;
+  animation: slidein 0.3s ease;
+}
+
+.system-message-titlebar {
+  background-color: #7c4fa0;
+  padding: 6px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 6px 6px 0 0;
+}
+
+.system-message-title {
+  font-family: 'Pixelify Sans', sans-serif;
+  font-size: 14px;
+  color: white;
+}
+
+.system-message-close {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  object-fit: contain;
+}
+
+.system-message-content {
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-family: 'Karla', sans-serif;
+  font-size: 14px;
+  color: #333;
+}
+
+@keyframes slidein {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
