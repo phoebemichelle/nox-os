@@ -24,6 +24,7 @@ function Taskbar({ openApps, onAppClick }) {
         </div>
         {openApps.map(app => (
           <div key={app.id} className="taskbar-app" onClick={() => onAppClick(app.id)}>
+            <img src={app.icon} alt={app.label} style={{ width: '30px', height: '30px', objectFit: 'contain' }} />
             {app.label}
           </div>
         ))}

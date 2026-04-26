@@ -1,0 +1,47 @@
+.window {
+  position: fixed;
+  min-width: 400px;
+  min-height: 300px;
+  background-color: #f0e8f8;
+  border-radius: 10px;
+  border: 3px solid #7c4fa0;
+  box-shadow: 4px 4px 0px #7c4fa0;
+  overflow: hidden;
+}
+
+.window-titlebar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 6px;
+  height: 38px;
+  background-color: #7c4fa0;
+  cursor: grab;
+  user-select: none;
+}
+
+.window-title {
+  font-family: 'Pixelify Sans', sans-serif;
+  font-size: 16px;
+  color: white;
+}
+
+.window-buttons {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.window-btn {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  object-fit: contain;
+}
+
+.window-content {
+  padding: 20px;
+  font-family: 'Karla', sans-serif;
+  font-size: 16px;
+  color: #333;
+}
