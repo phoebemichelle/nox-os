@@ -35,6 +35,7 @@ function ReadmeApp({ onClose }) {
           <li><strong>React</strong> — frontend framework</li>
           <li><strong>Vite</strong> — build tool</li>
           <li><strong>CSS</strong> — all custom, no UI libraries</li>
+          <li><strong>Claude</strong> — my AI coding buddy who helped me during desperate times and held my hand through the whole build 🤖💜</li>
           <li><strong>Figma</strong> — prototyping and design</li>
           <li><strong>Aseprite</strong> — pixel art icon creation</li>
         </ul>
