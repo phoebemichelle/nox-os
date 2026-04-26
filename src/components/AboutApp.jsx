@@ -39,7 +39,7 @@ function AboutApp({ onClose }) {
           alignItems: 'center',
         }}>
           <img 
-            src="/src/assets/images/Phoebe.png" 
+            src="/images/Phoebe.png" 
             alt="Phoebe"
             style={{
               width: '100%',

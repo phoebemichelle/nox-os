@@ -1,7 +1,7 @@
 .desktop {
     width: 100vw;
     height: 100vh;
-    background-image: url('/src/assets/images/Background.png');
+    background-image: url('/images/Background.png');
     background-size: cover;
     background-position: center;
     position: relative;

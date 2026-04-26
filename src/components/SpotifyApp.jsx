@@ -15,7 +15,7 @@ function SpotifyApp({ onClose }) {
         padding: '8px',
       }}>
         <img
-          src="/src/assets/icons/Close.png"
+          src="/icons/Close.png"
           alt="close"
           onClick={onClose}
           style={{ width: '30px', height: '30px', cursor: 'pointer' }}

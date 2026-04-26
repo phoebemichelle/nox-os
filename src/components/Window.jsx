@@ -62,8 +62,8 @@ function Window({ app, onClose, onFocus, zIndex, isMinimised, onMinimise }) {
               <span className="window-title">{app.label}</span>
             </div>
             <div className="window-buttons">
-              <img src="/src/assets/icons/Minimise.png" alt="minimise" style={{ width: '30px', height: '30px', objectFit: 'contain' }} className="window-btn" onClick={(e) => { e.stopPropagation(); onMinimise(); }} />
-              <img src="/src/assets/icons/Close.png" alt="close" style={{ width: '30px', height: '30px', objectFit: 'contain' }} className="window-btn" onClick={onClose} />
+              <img src="/icons/Minimise.png" alt="minimise" style={{ width: '30px', height: '30px', objectFit: 'contain' }} className="window-btn" onClick={(e) => { e.stopPropagation(); onMinimise(); }} />
+              <img src="/icons/Close.png" alt="close" style={{ width: '30px', height: '30px', objectFit: 'contain' }} className="window-btn" onClick={onClose} />
             </div>
           </div>
           <div className="window-content">
