@@ -1,0 +1,22 @@
+.readme-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 15px;
+  font-family: 'Pixelify sans', sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #333;
+}
+
+.readme-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.readme-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.readme-content::-webkit-scrollbar-thumb {
+  background-color: #7c4fa0;
+  border-radius: 10px;
+}

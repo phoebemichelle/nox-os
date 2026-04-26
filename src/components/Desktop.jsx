@@ -1,10 +1,11 @@
 import './Desktop.css'
 import SpotifyApp from './SpotifyApp'
 import AboutApp from './AboutApp'
+import ReadmeApp from './ReadmeApp'
 
 const apps = [
   { id: 'about', label: 'About Me', icon: '/src/assets/icons/Bunny.png', content: <AboutApp />, width: 600, height: 500 },
-  { id: 'readme', label: 'README.md', icon: '/src/assets/icons/ReadMe.png', content: <p>README</p> },
+  { id: 'readme', label: 'README.md', icon: '/src/assets/icons/ReadMe.png', content: <ReadmeApp />, width: 550, height: 450 },
   { id: 'experience', label: 'Experience', icon: '/src/assets/icons/Experience.png', content: <p>Experience</p> },
   { id: 'education', label: 'Education', icon: '/src/assets/icons/Educated.png', content: <p>Education</p> },
   { id: 'projects', label: 'Projects', icon: '/src/assets/icons/Computer.png', content: <p>Projects</p> },

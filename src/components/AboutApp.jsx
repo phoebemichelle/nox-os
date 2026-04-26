@@ -21,7 +21,7 @@ function AboutApp({ onClose }) {
           fontFamily: 'Pixelify Sans, sans-serif',
         }}>
           <h2 style={{ fontFamily: 'Pixelify Sans', color: '#7c4fa0' }}>Hi!</h2>
-          <p>I'm Phoebe! Welcome to my portfolio ૮ ˶ᵔ ᵕ ᵔ˶ ა</p>
+          <p>I'm Phoebe Sunata! Welcome to my portfolio ૮ ˶ᵔ ᵕ ᵔ˶ ა</p>
           <br/>
           <p>I'm a Master of IT student at the University of Auckland, graduating end of 2026. 
             I enjoy building things people actually use. I'm particularly interested in practical, 
