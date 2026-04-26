@@ -3,7 +3,7 @@ import './ReadmeApp.css'
 function ReadmeApp({ onClose }) {
   return (
     <div style={{
-      width: '550px',
+      width: '600px',
       height: '450px',
       display: 'flex',
       flexDirection: 'column',
@@ -37,6 +37,7 @@ function ReadmeApp({ onClose }) {
           <li><strong>CSS</strong> — all custom, no UI libraries</li>
           <li><strong>Claude</strong> — my AI coding buddy who helped me during desperate times and held my hand through the whole build 🤖💜</li>
           <li><strong>Figma</strong> — prototyping and design</li>
+          <li><strong>EmailJS</strong> — powers the contact form, sends messages straight to my inbox</li>
           <li><strong>Aseprite</strong> — pixel art icon creation</li>
         </ul>
 
@@ -47,7 +48,7 @@ function ReadmeApp({ onClose }) {
           <li>➖ <strong>Minimize</strong> windows using the button or clicking the app in the taskbar</li>
           <li>✕ <strong>Close</strong> windows using the close button</li>
           <li>📋 <strong>Taskbar</strong> at the bottom tracks everything that's open</li>
-          <li>📩 <strong>Contact Me</strong> lets you send me a message directly from the website and it lands straight in my inbox (in progress)</li>
+          <li>📩 <strong>Contact Me</strong> lets you send me a message directly from the website and it lands straight in my inbox</li>
           <li>🎵 <strong>Spotify</strong> is my own little music player using Spotify's API (in progress)</li>
         </ul>
 
