@@ -4,6 +4,7 @@ import Taskbar from './components/Taskbar'
 import Menubar from './components/Menubar'
 import Window from './components/Window'
 import SystemMessage from './components/SystemMessage'
+import { Analytics } from '@vercel/analytics/react'
 
 function App() {
   const [openApps, setOpenApps] = useState([])
@@ -59,6 +60,7 @@ function App() {
       ))}
       <Taskbar openApps={openApps} onAppClick={toggleMinimise} />
       <SystemMessage />
+      <Analytics />
     </>
   )
 }
