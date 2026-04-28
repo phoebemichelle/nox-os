@@ -65,9 +65,9 @@ src/
     ContactApp.jsx    # Contact form window
     SystemMessage.jsx # Welcome message window
     SpotifyApp.jsx    # Spotify window (WIP)
-  assets/
-    icons/            # Hand-drawn pixel art icons
-    images/           # Background and photos
+public/
+  icons/               # Hand-drawn pixel art icons
+  images/              # Background and photos
 ```
 
 ---
