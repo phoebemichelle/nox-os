@@ -53,3 +53,20 @@
     transform: translateY(0);
   }
 }
+
+@media (max-width: 768px) {
+  .system-message {
+    width: 220px;
+    bottom: 50px;
+    right: 10px;
+  }
+
+  .system-message-content {
+    padding: 10px 12px;
+    font-size: 12px;
+  }
+
+  .system-message-title {
+    font-size: 12px;
+  }
+}

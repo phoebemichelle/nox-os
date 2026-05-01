@@ -11,10 +11,10 @@ const apps = [
   { id: 'about', label: 'About Me', icon: '/icons/Bunny.png', content: <AboutApp />, width: 700, height: 450 },
   { id: 'readme', label: 'README.md', icon: '/icons/ReadMe.png', content: <ReadmeApp />, width: 600, height: 450 },
   { id: 'experience', label: 'Experience', icon: '/icons/Experience.png', content: <ExperienceApp />, width: 550, height: 500 },
-  { id: 'education', label: 'Education', icon: '/icons/Educated.png', content: <EducationApp />, width: 450, height: 270 },
+  { id: 'education', label: 'Education', icon: '/icons/Educated.png', content: <EducationApp />, width: 450, height: 320 },
   { id: 'projects', label: 'Projects', icon: '/icons/Computer.png', content: <ProjectsApp />, width: 540, height: 480 },
   { id: 'contact', label: 'Contact Me', icon: '/icons/Contact.png', content: <ContactApp />, width: 440, height: 480 },
-  { id: 'spotify', label: 'Spotify', icon: '/icons/Music.png', custom: true, content: <SpotifyApp /> },
+  { id: 'spotify', label: 'Spotify', icon: '/icons/Music.png', custom: true, content: <SpotifyApp />, width: 500, height: 400 },
 ]
 
 function Desktop({ onOpenApp }) {

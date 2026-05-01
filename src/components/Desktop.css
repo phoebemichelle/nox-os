@@ -1,54 +1,91 @@
 .desktop {
-    width: 100vw;
-    height: 100vh;
-    background-image: url('/images/Background.png');
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('/images/Background.png');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
 }
 
 .icon-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 60px);
-    gap: 40px 80px;
-    padding: 70px 40px;
+  display: grid;
+  grid-template-columns: repeat(2, 80px);
+  gap: 40px 60px;
+  padding: 50px 30px 60px 30px;
+  height: calc(100vh - 80px);
+  align-content: start;
+  overflow: visible;
 }
 
 .icon-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    cursor: pointer;
-    gap: 0px;
-    user-select: none;
-    padding: 6px;
-    width: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  gap: 0px;
+  user-select: none;
+  padding: 6px;
+  width: 90px;
 }
 
 .icon-item img {
-    width: 90px;
-    height: 90px;
-    object-fit: contain;
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
 }
 
 .icon-item span {
-    color: white;
-    white-space: nowrap;
-    font-size: 16px;
-    text-align: center;
-    font-family: 'Pixelify Sans', sans-serif;
-    font-weight: 500;
-    text-shadow:
-        -0.5px -0.5px 0 black,
-        0.5px -0.5px 0 black,
-        -0.5px  0.5px 0 black,
-        0.5px  0.5px 0 black;
-    margin-top: -5px;
+  color: white;
+  white-space: nowrap;
+  font-size: 14px;
+  text-align: center;
+  font-family: 'Pixelify Sans', sans-serif;
+  font-weight: 500;
+  margin-top: -4px;
+  text-shadow:
+    -0.5px -0.5px 0 black,
+    0.5px -0.5px 0 black,
+    -0.5px 0.5px 0 black,
+    0.5px 0.5px 0 black;
 }
 
 .icon-item:hover {
   background-color: rgba(255, 255, 255, 0.2);
   outline: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 4px;
+}
+
+@media (max-height: 700px) {
+  .icon-grid {
+    gap: 20px 60px;
+    padding-top: 40px;
+  }
+
+  .icon-item img {
+    width: 55px;
+    height: 55px;
+  }
+}
+
+@media (max-width: 768px) {
+  .icon-grid {
+    grid-template-columns: repeat(2, 60px);
+    gap: 24px 40px;
+    padding: 50px 20px;
+  }
+
+  .icon-item {
+    width: 70px;
+    padding: 4px;
+  }
+
+  .icon-item img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .icon-item span {
+    font-size: 11px;
+  }
 }

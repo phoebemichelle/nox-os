@@ -57,3 +57,37 @@
   font-family: 'Karla', monospace;
   font-size: 18px;
 }
+
+@media (max-width: 768px) {
+  .taskbar {
+    height: 40px;
+    padding: 0 10px;
+  }
+
+  .taskbar-app {
+    padding: 2px 8px;
+    font-size: 12px;
+  }
+
+  .taskbar-app span {
+    display: none;
+  }
+
+  .taskbar-right span {
+    font-size: 11px;
+  }
+
+  .taskbar-right img {
+    width: 14px;
+    height: 14px;
+  }
+
+  .taskbar-app-label {
+    display: none;
+  }
+  
+  .start-btn img {
+    width: 18px;
+    height: 18px;
+  }
+}

@@ -1,11 +1,6 @@
 .window {
   position: fixed;
-  min-width: 400px;
-  min-height: 300px;
-  background-color: #f0e8f8;
   border-radius: 10px;
-  border: 3px solid #7c4fa0;
-  box-shadow: 4px 4px 0px #7c4fa0;
   overflow: hidden;
 }
 
@@ -14,10 +9,11 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 6px;
-  height: 38px;
+  height: 48px;
   background-color: #7c4fa0;
   cursor: grab;
   user-select: none;
+  flex-shrink: 0;
 }
 
 .window-title {
@@ -33,15 +29,42 @@
 }
 
 .window-btn {
-  width: 20px;
-  height: 20px;
   cursor: pointer;
   object-fit: contain;
 }
 
 .window-content {
-  padding: 20px;
-  font-family: 'Pixelify Sans', sans-serif;
+  font-family: 'Karla', sans-serif;
   font-size: 16px;
   color: #333;
+  width: 100%;
+  height: calc(100% - 48px);
+  overflow-x: hidden;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .window {
+    border-radius: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  .window-content {
+    height: calc(100% - 48px);
+    overflow: hidden;
+  }
+
+  .window-content:has(.experience-container),
+  .window-content:has(.projects-container),
+  .window-content:has(.readme-wrapper),
+  .window-content:has(.about-container) {
+    overflow-y: auto;
+  }
+
+  .window-content:has(.education-container),
+  .window-content:has(.contact-container) {
+    overflow-y: hidden;
+  }
 }

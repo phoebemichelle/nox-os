@@ -1,0 +1,126 @@
+.about-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+.about-inner {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  padding: 10px;
+  gap: 10px;
+}
+
+.about-bio {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: 'Karla', sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.about-heading {
+  font-family: 'Pixelify Sans', sans-serif;
+  color: #7c4fa0;
+  margin-bottom: 6px;
+}
+
+.about-photo {
+  width: 300px;
+  display: flex;
+  align-items: center;
+}
+
+.about-photo img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.about-links {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+
+.tooltip-wrapper {
+  position: relative;
+}
+
+.about-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #e8d5f5;
+  color: #7c4fa0;
+  font-family: 'Karla', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid #c9a8e0;
+  text-decoration: none;
+}
+
+.tooltip {
+  position: absolute;
+  bottom: 110%;
+  left: 0;
+  background-color: #7c4fa0;
+  color: white;
+  font-family: 'Karla', sans-serif;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 6px;
+  white-space: nowrap;
+  z-index: 9999;
+}
+
+/* ── MOBILE ── */
+@media (max-width: 768px) {
+  .about-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  .about-inner {
+    flex-direction: column;
+  }
+
+  .about-photo {
+    width: 100%;
+  }
+
+  .about-bio {
+    justify-content: flex-start;
+  }
+
+  .tooltip {
+    display: none;
+  }
+
+  .about-link::after {
+    display: block;
+    font-size: 11px;
+    color: #9b6bbf;
+    font-weight: 400;
+  }
+
+  .tooltip-wrapper:nth-child(1) .about-link::after {
+    content: 'linkedin.com/in/phoebe-sunata';
+  }
+
+  .tooltip-wrapper:nth-child(2) .about-link::after {
+    content: 'github.com/phoebemichelle';
+  }
+
+  .tooltip-wrapper:nth-child(3) .about-link::after {
+    content: 'phoebemichelle012@gmail.com';
+  }
+}

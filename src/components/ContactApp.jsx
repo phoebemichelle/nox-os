@@ -45,6 +45,7 @@ function ContactApp() {
       )
       setStatus('sent')
       setForm({ name: '', email: '', message: '' })
+    // eslint-disable-next-line no-unused-vars
     } catch (error) {
       setStatus('error')
     }

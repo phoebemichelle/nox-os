@@ -3,14 +3,25 @@ import React from 'react'
 import './Window.css'
 
 function Window({ app, onClose, onFocus, zIndex, isMinimised, onMinimise }) {
-  const [position, setPosition] = useState({ 
-    x: window.innerWidth / 2 - (app.width || 400)/2,
-    y: window.innerHeight / 2 - (app.height || 300)/2,
+  const isMobile = window.innerWidth <= 768
+
+  const getAvailableHeight = () => window.innerHeight - 80
+  const getAvailableWidth = () => window.innerWidth
+
+  const getWindowWidth = () => Math.min(app.width || 400, getAvailableWidth() - 40)
+  const getWindowHeight = () => Math.min(app.height || 300, getAvailableHeight() - 40)
+
+  const getInitialPosition = () => ({
+    x: (getAvailableWidth() - getWindowWidth()) / 2,
+    y: 30 + (getAvailableHeight() - getWindowHeight()) / 2,
   })
+
+  const [position, setPosition] = useState(getInitialPosition)
   const dragging = useRef(false)
   const offset = useRef({ x: 0, y: 0 })
 
   const onMouseDown = (e) => {
+    if (isMobile) return
     dragging.current = true
     offset.current = {
       x: e.clientX - position.x,
@@ -18,6 +29,25 @@ function Window({ app, onClose, onFocus, zIndex, isMinimised, onMinimise }) {
     }
     onFocus()
   }
+
+  useEffect(() => {
+    const getAvailableHeight = () => window.innerHeight - 80
+    const getAvailableWidth = () => window.innerWidth
+    const getWindowWidth = () => Math.min(app.width || 400, getAvailableWidth() - 40)
+    const getWindowHeight = () => Math.min(app.height || 300, getAvailableHeight() - 40)
+    const getInitialPosition = () => ({
+      x: (getAvailableWidth() - getWindowWidth()) / 2,
+      y: 30 + (getAvailableHeight() - getWindowHeight()) / 2,
+    })
+
+    const handleResize = () => {
+      if (!dragging.current) {
+        setPosition(getInitialPosition())
+      }
+    }
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [app.width, app.height])
 
   useEffect(() => {
     const onMouseMove = (e) => {
@@ -40,8 +70,10 @@ function Window({ app, onClose, onFocus, zIndex, isMinimised, onMinimise }) {
     <div
       className="window"
       style={{
-        left: position.x,
-        top: position.y,
+        left: isMobile ? 0 : position.x,
+        top: isMobile ? 30 : position.y,
+        width: isMobile ? '100vw' : getWindowWidth(),
+        height: isMobile ? 'calc(100vh - 70px)' : getWindowHeight(),
         zIndex,
         backgroundColor: app.custom ? 'transparent' : '#f0e8f8',
         border: app.custom ? 'none' : '3px solid #7c4fa0',
@@ -51,7 +83,10 @@ function Window({ app, onClose, onFocus, zIndex, isMinimised, onMinimise }) {
       onMouseDown={onFocus}
     >
       {app.custom ? (
-        <div onMouseDown={onMouseDown}>
+        <div 
+          onMouseDown={onMouseDown} 
+          style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column' }}
+        >
           {React.cloneElement(app.content, { onClose })}
         </div>
       ) : (
@@ -62,8 +97,20 @@ function Window({ app, onClose, onFocus, zIndex, isMinimised, onMinimise }) {
               <span className="window-title">{app.label}</span>
             </div>
             <div className="window-buttons">
-              <img src="/icons/Minimise.png" alt="minimise" style={{ width: '30px', height: '30px', objectFit: 'contain' }} className="window-btn" onClick={(e) => { e.stopPropagation(); onMinimise(); }} />
-              <img src="/icons/Close.png" alt="close" style={{ width: '30px', height: '30px', objectFit: 'contain' }} className="window-btn" onClick={onClose} />
+              <img
+                src="/icons/Minimise.png"
+                alt="minimise"
+                style={{ width: '30px', height: '30px', objectFit: 'contain' }}
+                className="window-btn"
+                onClick={(e) => { e.stopPropagation(); onMinimise(); }}
+              />
+              <img
+                src="/icons/Close.png"
+                alt="close"
+                style={{ width: '30px', height: '30px', objectFit: 'contain' }}
+                className="window-btn"
+                onClick={onClose}
+              />
             </div>
           </div>
           <div className="window-content">

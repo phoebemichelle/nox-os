@@ -1,13 +1,8 @@
 import './ReadmeApp.css'
 
-function ReadmeApp({ onClose }) {
+function ReadmeApp() {
   return (
-    <div style={{
-      width: '600px',
-      height: '450px',
-      display: 'flex',
-      flexDirection: 'column',
-    }}>
+    <div className="readme-wrapper">
       <div className="readme-content">
 
         <h2 style={{ fontFamily: 'Pixelify Sans', color: '#7c4fa0', marginBottom: '4px' }}>
